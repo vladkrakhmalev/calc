@@ -1,0 +1,294 @@
+		<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+		<form class="calc">
+			<div class="container">
+				<h3 class="calc__title">Рассчитайте вашу москитную сетку плиссе</h3>
+				<div class="calc__flex">
+					<input class="calc__radio-input" type="radio" name="calc-type" id="calc-type-vertically" value="vertically" checked>
+					<input class="calc__radio-input" type="radio" name="calc-type" id="calc-type-horizontally" value="horizontally">
+					<input class="calc__radio-input" type="radio" name="calc-type" id="calc-type-center" value="center">
+					<input class="calc__radio-input" type="radio" name="calc-type" id="calc-type-round-trip" value="round-trip">
+					<label class="calc__flex-item _active" for="calc-type-vertically">
+						<img src="img/calc_vertically.png" alt="" class="calc__flex-img">
+						<span class="calc__btn-radio">
+							<span class="calc__btn-circle"></span>
+						</span>
+						<p class="calc__text">Вертикально</p>
+					</label>
+					<label class="calc__flex-item" for="calc-type-horizontally">
+						<img src="img/calc_horizontally.png" alt="" class="calc__flex-img">
+						<span class="calc__btn-radio">
+							<span class="calc__btn-circle"></span>
+						</span>
+						<p class="calc__text">Горизонтально</p>
+					</label>
+					<label class="calc__flex-item" for="calc-type-center">
+						<img src="img/calc_center.png" alt="" class="calc__flex-img">
+						<span class="calc__btn-radio">
+							<span class="calc__btn-circle"></span>
+						</span>
+						<p class="calc__text">К центру</p>
+					</label>
+					<label class="calc__flex-item" for="calc-type-round-trip">
+						<img src="img/clac_round_trip.png" alt="" class="calc__flex-img">
+						<span class="calc__btn-radio">
+							<span class="calc__btn-circle"></span>
+						</span>
+						<p class="calc__text">В обе стороны</p>
+					</label>
+				</div>
+				<div class="calc__grid">
+					<div class="calc__product">
+						<div class="calc__range range _left"></div>
+						<div class="calc__range range _bottom"></div>
+						<img src="img/calc_product.png" alt="" class="calc__product-img">
+					</div>
+					<div class="calc__info">
+						<h5 class="calc__h5">Москитная сетка Плиссе</h5>
+						<div class="calc__fields">
+							<div class="calc__field">
+								<p class="calc__label">Ширина</p>
+								<div class="calc__input _width">
+									<img src="img/i_calc_input.png" alt="" class="calc__input-icon">
+									<input type="number" class="calc__input-val" name="calc-width" value="2500" min="0" max="6000">
+									<p class="calc__input-unit">мм</p>
+								</div>
+							</div>
+							<div class="calc__field">
+								<p class="calc__label">Длина</p>
+								<div class="calc__input _height">
+									<img src="img/i_calc_input.png" alt="" class="calc__input-icon">
+									<input type="number" class="calc__input-val" name="calc-height" value="2500" min="0" max="3000">
+									<p class="calc__input-unit">мм</p>
+								</div>
+							</div>
+						</div>
+						<a href="#" class="calc__video">
+							<img src="img/i_calc_video.png" alt="" class="calc__video-icon">
+							<span class="calc__video-text">Как замерить?</span>
+						</a>
+						<h5 class="calc__h5">Цвет рамки</h5>
+						<div class="calc__colors">
+							<img src="img/bg_calc.png" alt="" class="calc__colors-img"></img>
+							<div class="calc__colors-list">
+								<input type="radio" class="calc__radio-input" name="calc-color" id="calc-color-white" value="white" checked>
+								<input type="radio" class="calc__radio-input" name="calc-color" id="calc-color-brown" value="brown">
+								<input type="radio" class="calc__radio-input" name="calc-color" id="calc-color-ral" value="ral">
+								<label class="calc__color _active" for="calc-color-white">
+									<span class="calc__color-icon">
+										<span class="calc__color-circle _white"></span>
+									</span>
+									<p class="calc__text">Белый</p>
+								</label>
+								<label class="calc__color" for="calc-color-brown">
+									<span class="calc__color-icon">
+										<span class="calc__color-circle _brown"></span>
+									</span>
+									<p class="calc__text">Коричневый</p>
+								</label>
+								<label class="calc__color" for="calc-color-ral">
+									<span class="calc__color-icon">
+										<span class="calc__color-circle _ral"></span>
+									</span>
+									<p class="calc__text">RAL</p>
+									<span title="Тут какая-то информация" class="calc__question">
+										<span>?</span>
+									</span>
+								</label>
+							</div>
+						</div>
+						<h5 class="calc__h5">Тип сетки</h5>
+						<select name="calc-type" class="calc__select">
+							<option value="Стандартное полотно">Стандартное полотно</option>
+							<option value="Стандартное полотно2">Стандартное полотно 2</option>
+							<option value="Стандартное полотно3">Стандартное полотно 3</option>
+							<option value="Стандартное полотно4">Стандартное полотно 4</option>
+						</select>
+						<button class="calc__btn">Рассчитать</button>
+					</div>
+				</div>
+			</div>
+		</form>
+
+		<div class="popups">
+
+  <div class="popup__bg" id="color-popup">
+    <form action="" class="popup">
+      <div class="popup__btn-close btn-close">
+        <span class="btn-close__line _1"></span>
+        <span class="btn-close__line _2"></span>
+      </div>
+      <h3 class="popup__h3">Каталог цветов RAL</h3>
+      <div class="popup__content">
+        <h5 class="popup__h5">Стандартные цвета</h5>
+        <div class="popup__colors">
+          <div class="popup__color _9003" data-ral-color="9003">
+            <p class="popup__color-title">1234</p>
+          </div>
+          <div class="popup__color _8017" data-ral-color="8017">
+            <p class="popup__color-title">312s</p>
+          </div>
+          <div class="popup__color _9003" data-ral-color="9003">
+            <p class="popup__color-title">1234</p>
+          </div>
+          <div class="popup__color _8017" data-ral-color="8017">
+            <p class="popup__color-title">312s</p>
+          </div>
+          <div class="popup__color _9003" data-ral-color="9003">
+            <p class="popup__color-title">1234</p>
+          </div>
+          <div class="popup__color _8017" data-ral-color="8017">
+            <p class="popup__color-title">312s</p>
+          </div>
+          <div class="popup__color _9003" data-ral-color="9003">
+            <p class="popup__color-title">1234</p>
+          </div>
+          <div class="popup__color _8017" data-ral-color="8017">
+            <p class="popup__color-title">312s</p>
+          </div>
+        </div>
+        <h5 class="popup__h5">Индивидуальные цвета</h5>
+          <div class="popup__colors">
+            <div class="popup__color _9003" data-ral-color="9003">
+              <p class="popup__color-title">1234</p>
+            </div>
+            <div class="popup__color _8017" data-ral-color="8017">
+              <p class="popup__color-title">312s</p>
+            </div>
+            <div class="popup__color _9003" data-ral-color="9003">
+              <p class="popup__color-title">1234</p>
+            </div>
+            <div class="popup__color _8017" data-ral-color="8017">
+              <p class="popup__color-title">312s</p>
+            </div>
+            <div class="popup__color _9003" data-ral-color="9003">
+              <p class="popup__color-title">1234</p>
+            </div>
+            <div class="popup__color _8017" data-ral-color="8017">
+              <p class="popup__color-title">312s</p>
+            </div>
+            <div class="popup__color _9003" data-ral-color="9003">
+              <p class="popup__color-title">1234</p>
+            </div>
+            <div class="popup__color _8017" data-ral-color="8017">
+              <p class="popup__color-title">312s</p>
+            </div>
+            <div class="popup__color _9003" data-ral-color="9003">
+              <p class="popup__color-title">1234</p>
+            </div>
+            <div class="popup__color _8017" data-ral-color="8017">
+              <p class="popup__color-title">312s</p>
+            </div>
+            <div class="popup__color _9003" data-ral-color="9003">
+              <p class="popup__color-title">1234</p>
+            </div>
+            <div class="popup__color _8017" data-ral-color="8017">
+              <p class="popup__color-title">312s</p>
+            </div>
+            <div class="popup__color _9003" data-ral-color="9003">
+              <p class="popup__color-title">1234</p>
+            </div>
+            <div class="popup__color _8017" data-ral-color="8017">
+              <p class="popup__color-title">312s</p>
+            </div>
+            <div class="popup__color _9003" data-ral-color="9003">
+              <p class="popup__color-title">1234</p>
+            </div>
+            <div class="popup__color _8017" data-ral-color="8017">
+              <p class="popup__color-title">312s</p>
+            </div>
+            <div class="popup__color _9003" data-ral-color="9003">
+              <p class="popup__color-title">1234</p>
+            </div>
+            <div class="popup__color _8017" data-ral-color="8017">
+              <p class="popup__color-title">312s</p>
+            </div>
+            <div class="popup__color _9003" data-ral-color="9003">
+              <p class="popup__color-title">1234</p>
+            </div>
+            <div class="popup__color _8017" data-ral-color="8017">
+              <p class="popup__color-title">312s</p>
+            </div>
+            <div class="popup__color _9003" data-ral-color="9003">
+              <p class="popup__color-title">1234</p>
+            </div>
+            <div class="popup__color _8017" data-ral-color="8017">
+              <p class="popup__color-title">312s</p>
+            </div>
+            <div class="popup__color _9003" data-ral-color="9003">
+              <p class="popup__color-title">1234</p>
+            </div>
+            <div class="popup__color _8017" data-ral-color="8017">
+              <p class="popup__color-title">312s</p>
+            </div>
+            <div class="popup__color _9003" data-ral-color="9003">
+              <p class="popup__color-title">1234</p>
+            </div>
+            <div class="popup__color _8017" data-ral-color="8017">
+              <p class="popup__color-title">312s</p>
+            </div>
+            <div class="popup__color _9003" data-ral-color="9003">
+              <p class="popup__color-title">1234</p>
+            </div>
+            <div class="popup__color _8017" data-ral-color="8017">
+              <p class="popup__color-title">312s</p>
+            </div>
+          </div>
+      </div>
+    </form>
+  </div>
+  
+  <div class="popup__bg" id="form-popup">
+    <form action="" class="popup _small">
+      <div class="popup__btn-close btn-close">
+        <span class="btn-close__line _1"></span>
+        <span class="btn-close__line _2"></span>
+      </div>
+      <h3 class="popup__h3">Отправить заявку на расчет сетки плиссе</h3>
+      <div class="popup__content">
+        <div class="input">
+          <input class="input__field" type="text" name="name" required>
+          <p class="input__label">Ваше имя</p>
+        </div>
+        <div class="input">
+          <input class="input__field" type="tel" name="tel" required>
+          <p class="input__label">Ваш номер телефона</p>
+        </div>
+        <button class="popup__btn" type="submit">Отправить заявку</button>
+      </div>
+    </form>
+  </div>
+
+    <div class="popup__bg" id="message-popup">
+      <form action="" class="popup _small">
+        <div class="popup__btn-close btn-close">
+          <span class="btn-close__line _1"></span>
+          <span class="btn-close__line _2"></span>
+        </div>
+        <h3 class="popup__h3"></h3>
+      </form>
+    </div>
+
+</div>
+
+		
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
+
